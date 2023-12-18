@@ -21,10 +21,6 @@ export default function RootLayout({
 
         <Header />
 
-        <Hero />
-
-        <Description/> 
-
         {children}
 
         <Footer />
