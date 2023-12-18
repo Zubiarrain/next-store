@@ -7,6 +7,7 @@ interface CategoryProps {
 
 export default function Category(props: CategoryProps){
     const { categories } = props.params
+    // throw new Error('Boom!')
 
     return (
         <>
