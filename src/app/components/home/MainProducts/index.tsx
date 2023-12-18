@@ -27,7 +27,6 @@ const getProducts = async () => {
 
 export const MainProducts = async () => {
   const products = await getProducts()
-  console.log(products)
   return (
     <section className={styles.MainProducts}>
       <h3>✨ New products released!</h3>
