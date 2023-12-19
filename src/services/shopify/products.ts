@@ -1,5 +1,6 @@
 import { env } from "app/config/env"
 import { shopifyUrls } from "./urls"
+import axios from "axios"
 
 
 export const getProducts = async () => {
@@ -13,7 +14,8 @@ export const getProducts = async () => {
         headers: {
             'X-Shopify-Access-Token': process.env.SHOPIFY_API_KEY || ""
         }
-        }) */
+        })
+        console.log(response) */
         const {products} = await response.json()
         return products
         
