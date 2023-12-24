@@ -1,4 +1,4 @@
-import { ProductsWrapper } from "app/app/components/Store/ProductsWrapper/ProductsWrapper"
+import { ProductsWrapper } from "app/components/Store/ProductsWrapper/ProductsWrapper"
 import { getCollectionProducts, getCollections } from "app/services/shopify/collections";
 import { getProducts } from "app/services/shopify/products";
 
