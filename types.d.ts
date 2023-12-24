@@ -3,12 +3,18 @@ interface ErrorPageProps {
     reset: () => void
 }
 
+type ProductImage  = {
+    id: string;
+    src: string
+}
+
 type ProductType = {
     id: string;
     title: string;
     description: string;
     price: number;
     image: string;
+    images: Array<ProductImage>;
     quantity: number;
     handle: string;
     tags: string;

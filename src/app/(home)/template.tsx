@@ -10,7 +10,6 @@ export default function HomeLayout({
 }: {
   children: React.ReactNode
 }) {
-  console.log('envio de metricas')
   return (
       <div>
 

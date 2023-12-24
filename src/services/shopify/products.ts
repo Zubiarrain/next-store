@@ -36,7 +36,27 @@ export const getProducts = async (id?:string): Promise<ProductType[]> => {
         
     } catch (error) {
         console.log(error)
+        const voidProductList: ProductType[] = []
+        return voidProductList
         
     }
   
 }
+
+export const getMainProducts = async (): Promise<ProductType[]> => {
+    try {
+        const response = await fetch(shopifyUrls.products.mainProducts, {
+            headers: new Headers({
+              'X-Shopify-Access-Token': env.SHOPIFY_TOKEN
+            })
+          })
+        
+          const {products} = await response.json()
+        
+          return products
+    } catch (error) {
+        console.log(error)
+        const voidProductList: ProductType[] = []
+        return voidProductList
+    }
+  }
