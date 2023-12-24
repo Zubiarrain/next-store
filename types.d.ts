@@ -41,3 +41,10 @@ type CollectionType = {
     title: string;
     handle: string;
 };
+
+type CartItem = {
+    title: string;
+    price: number;
+    quantity: number;
+    id: string;
+  }
