@@ -1,8 +1,5 @@
-"use client"
-
 import { Description } from "../components/home/Description"
 import { Hero } from "../components/home/Hero"
-import 'app/sass/globals.sass'
 
 
 export default function HomeLayout({
