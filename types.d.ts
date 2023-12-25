@@ -18,6 +18,7 @@ type ProductType = {
     quantity: number;
     handle: string;
     tags: string;
+    gql_id: string;
   };
 
 type SmartCollectionType = {
@@ -32,7 +33,7 @@ type SmartCollectionType = {
     disjunctive: false,
     rules: [Array],
     published_scope: 'global',
-    admin_graphql_api_id: 'gid://shopify/Collection/474981040444'
+    admin_graphql_api_id: 'gid://shopify/Collection/474981040444',
 
 };
 
@@ -47,4 +48,6 @@ type CartItem = {
     price: number;
     quantity: number;
     id: string;
+    image: string;
+    merchandiseId: string;
   }
