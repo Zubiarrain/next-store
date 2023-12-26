@@ -8,12 +8,14 @@ export const NewAccountForm = () => {
   const [errors, setErrors] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    const formData = new FormData(event.currentTarget)
+  const handleSubmit = async (event: {
+    target: any;
+    preventDefault: () => void;
+  }) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
     await handleCreateUser(formData)
   }
-
 
   return (
     <div className={styles.NewAccountForm}  >

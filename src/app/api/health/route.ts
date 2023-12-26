@@ -1,5 +1,5 @@
-export const runtime_ = "edge"
+export const runtime = "edge"
 
-export async function GET(){
-    return Response.json({status: 'ok'})
+export async function GET() {
+  return Response.json({ status: "ok" });
 }

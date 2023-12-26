@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { useShoppingCart } from "app/hooks/useShoppingCart";
-import { ShoppingCartItem } from "../ShoppingCartItem";
+import { ShoppingCartItem } from "./ShoppingCartItem";
 import { handleCreateCart } from "app/actions";
 import styles from './ShoppingCart.module.sass'
 
@@ -20,15 +20,15 @@ export default function ShoppingCart() {
 
   const handleBuy = async () => {
     try {
-        setIsBuying(true)
-        const checkoutUrl = await handleCreateCart(cart) || '/store'
-        if(!checkoutUrl) throw new Error('Error creating checkout')
-        window.localStorage.removeItem('cart')
-        window.location.href = checkoutUrl
+      setIsBuying(true);
+      const checkoutUrl = await handleCreateCart(cart);
+      if(!checkoutUrl) throw new Error('Error creating checkout');
+      window.localStorage.removeItem('cart');
+      window.location.href = checkoutUrl;
     } catch (error) {
-        console.log(error)
-    } finally{
-        setIsBuying(false)
+      console.log(error);
+    } finally {
+      setIsBuying(false);
     }
   }
 
@@ -50,7 +50,7 @@ export default function ShoppingCart() {
           {
             cart.map(item => (<ShoppingCartItem key={item.id} item={item} />))
           }
-          <button onClick={handleBuy} className={styles.ShoppingCart__buyButton} disabled={isBuying}>
+          <button onClick={handleBuy}  className={styles.ShoppingCart__buyButton} disabled={isBuying}>
             Buy
           </button>
         </div>
